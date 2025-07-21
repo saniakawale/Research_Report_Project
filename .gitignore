@@ -12,3 +12,4 @@ __pycache__/
 # Ignore output markdown files
 final_output.md
 
+.venv/
