@@ -1,6 +1,8 @@
 
 from crewai import Task
 from agents import researcher, writer, outliner, editor, supervisor
+import os
+print("GOOGLE_API_KEY is:", os.environ.get("GOOGLE_API_KEY"))
 
 outline_task = Task(
     description="Create a detailed outline for the research report on 'Impact of climate change on rice production in India'.",
@@ -27,7 +29,7 @@ edit_task = Task(
 )
 
 supervise_task = Task(
-    description="Review all stages—outline, research, writing, and editing—to ensure completeness and quality.",
+    description="Review all stages—outline, research, writing, and editing—to ensure completeness and quality of the research paper.",
     agent=supervisor,
     expected_output="A concise supervision report detailing checks, feedback, and any required revisions."
 )
