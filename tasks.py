@@ -2,6 +2,7 @@
 from crewai import Task
 from agents import researcher, writer, outliner, editor, supervisor
 import os
+
 outline_task = Task(
     description="Create a detailed outline for the research report on 'Impact of climate change on rice production in India'.",
     agent=outliner,
