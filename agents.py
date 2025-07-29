@@ -1,7 +1,6 @@
 from crewai import Agent
-from gemini_llm import GeminiLLM
+import openai
 
-gemini_llm = GeminiLLM()
 researcher = Agent(
     role="Researcher",
     goal="Find and summarize research sources for a report",
@@ -9,8 +8,7 @@ researcher = Agent(
         "You are an expert at conducting efficient and thorough online research. "
         "You find accurate and reliable sources to support an academic report."
     ),
-    llm=gemini_llm
-)
+    )
 
 writer = Agent(
     role="Writer",
@@ -19,8 +17,7 @@ writer = Agent(
         "You are a skilled content writer who transforms research material into "
         "cohesive and engaging academic sections."
     ),
-    llm=gemini_llm
-)
+    )
 
 outliner = Agent(
     role="Outliner",
@@ -29,8 +26,7 @@ outliner = Agent(
         "You are an expert academic strategist. You know how to organize research into "
         "a logical, well-structured academic report outline."
     ),
-    llm=gemini_llm
-)
+    )
 
 editor = Agent(
     role="Editor",
@@ -39,8 +35,7 @@ editor = Agent(
         "You are an experienced professional editor. You enhance readability, correctness, "
         "and adjust tone for academic and professional readability."
     ),
-    llm=gemini_llm
-)
+    )
 
 supervisor = Agent(
     role="Supervisor",
@@ -49,5 +44,4 @@ supervisor = Agent(
         "You are a senior research project manager. Your job is to oversee every agent's "
         "work, provide feedback, and ensure each step meets expected standards."
     ),
-    llm=gemini_llm
-)
+    )
