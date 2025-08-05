@@ -4,7 +4,7 @@ from agents import researcher, writer, outliner, editor, supervisor
 import os
 
 outline_task = Task(
-    description="Create a detailed outline for the research report on 'Impact of climate change on rice production in India'.",
+    description="Create a detailed outline for the research report on 'Model context protocol'.",
     agent=outliner,
     expected_output="A structured, sectioned outline in bullet or numbered format."
 )
